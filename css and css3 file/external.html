@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            margin: 0;
+        }
+
+        .page{
+            width: 320px;
+            margin: 80px auto;
+            padding: 20px;
+            background: white;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .btn{
+            display: inline-block;
+            width: 90%;
+            padding: 10px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Page 2 hidden first */
+        #page2{
+            display: none;
+        }
+
+        /* Show Page 2 after Register click */
+        #page2:target{
+            display: block;
+        }
+
+        /* Hide Page 1 */
+        #page2:target + #page1{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 2 -->
+    <div id="page2" class="page">
+        <h2 style="color:green;">Successfully Registered ✅</h2>
+        <h3>Welcome!</h3>
+        <p>Your registration is completed.</p>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div id="page1" class="page">
+        <h2>Student Registration</h2>
+
+        <input type="text" placeholder="Enter Name"><br>
+        <input type="email" placeholder="Enter Email"><br>
+        <input type="password" placeholder="Enter Password"><br><br>
+
+        <a href="#page2" class="btn">Register</a>
+    </div>
+
+</body>
+</html>
